@@ -1,3 +1,11 @@
-<%@recipes.each do |recipe|%>
-<p><%=recipe.summary%></p>
+<%=render 'shared/page_title', title: 'All Recipes' %>
+<%@recipes.each do |recipe| %>
+<div class="row">
+	<div class="col-lg-2">
+		<section class="chef-info center">
+    <%= link_to gravatar_for(recipe.chef, size:100), chef_path(recipe.chef) %>
+    <h5>chef name: <%= recipe.chef.chefname %></h5>
+</section>
+</div>
+</div>
 <%end%>
