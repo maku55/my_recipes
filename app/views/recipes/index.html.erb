@@ -7,5 +7,11 @@
     <h5>chef name: <%= recipe.chef.chefname %></h5>
 </section>
 </div>
-</div>
+<div class="col-lg-6 well ">
+	<h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+	<p><%= recipe.summary %></p>
+	<span class="quiet"><small>Created: <%= time_ago_in_words(recipe.created_at) %> ago, </small></span>
+	<span class="quiet"><small>Updated: <%= time_ago_in_words(recipe.updated_at) %> ago, </small></span>
+</div><!-- this ends the div with col-lg-6 -->
+</div><!-- this ends raw -->
 <%end%>
