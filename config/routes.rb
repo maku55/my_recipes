@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   root "pages#home"
   get '/home', to: 'pages#home'
-resources :recipes
-post '/new_recipe', to: 'recipes#create' 
+resources :recipes 
 resources :chefs, except: [:new, :destroy]
 get '/register', to: 'chefs#new'
 get '/login', to: 'logins#new'

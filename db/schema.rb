@@ -11,47 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901093630) do
+ActiveRecord::Schema.define(version: 20150902114152) do
 
-  create_table "chefs", force: true do |t|
-    t.string   "chefname"
-    t.string   "email"
-    t.string   "password_digest"
+  create_table "chefs", force: :cascade do |t|
+    t.string   "chefname",        limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.boolean  "admin",           limit: 1,   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "ingredients", force: true do |t|
-    t.string   "name"
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "recipe_ingredients", force: true do |t|
-    t.integer  "ingredient_id"
-    t.integer  "recipe_id"
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.integer  "ingredient_id", limit: 4
+    t.integer  "recipe_id",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "recipe_styles", force: true do |t|
-    t.integer  "style_id"
-    t.integer  "recipe_id"
+  create_table "recipe_styles", force: :cascade do |t|
+    t.integer  "style_id",   limit: 4
+    t.integer  "recipe_id",  limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "recipes", force: true do |t|
-    t.integer  "chef_id"
-    t.string   "name"
-    t.text     "summary"
-    t.text     "description"
+  create_table "recipes", force: :cascade do |t|
+    t.integer  "chef_id",     limit: 4
+    t.string   "name",        limit: 255
+    t.text     "summary",     limit: 65535
+    t.text     "description", limit: 65535
+    t.string   "picture",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "styles", force: true do |t|
-    t.string   "name"
+  create_table "styles", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

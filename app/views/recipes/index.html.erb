@@ -1,4 +1,5 @@
 <%=render 'shared/page_title', title: 'All Recipes' %>
+<%= will_paginate%>
 <%@recipes.each do |recipe| %>
 <div class="row">
 	<div class="col-lg-2">
@@ -13,5 +14,10 @@
 	<span class="quiet"><small>Created: <%= time_ago_in_words(recipe.created_at) %> ago, </small></span>
 	<span class="quiet"><small>Updated: <%= time_ago_in_words(recipe.updated_at) %> ago, </small></span>
 </div><!-- this ends the div with col-lg-6 -->
+<div class="col-md-4">
+	<%=image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture?%>
+</div>
 </div><!-- this ends raw -->
 <%end%>
+
+<%=will_paginate%>

@@ -17,6 +17,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 #use activeModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave',  '~> 0.10.0'
+gem 'fog','~> 1.33.0'
+gem 'mini_magick', '~>3.8.0'
+#gem 'rmagick', '~> 2.15.4'
+gem 'imagemagick-identify', '~> 0.0.1'
 gem 'will_paginate','~> 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 # Use jquery as the JavaScript library
