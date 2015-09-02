@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root "pages#home"
   get '/home', to: 'pages#home'
-resources :recipes 
+resources :recipes
+post '/new_recipe', to: 'recipes#create' 
 resources :chefs, except: [:new, :destroy]
 get '/register', to: 'chefs#new'
 get '/login', to: 'logins#new'
@@ -10,4 +11,6 @@ get '/logout', to:'logins#destroy'
 #just testing this sign up
 get '/new_user', to:'sign_ups#signup'
 post '/signup', to:'sign_ups#create'
+resources :styles, only: [:new, :create, :show]
+resources :ingredients, only: [:new , :create, :show]
 end

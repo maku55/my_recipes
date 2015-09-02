@@ -6,7 +6,7 @@ $navbar-default-color: $light-orange;
 @import "bootstrap";
 
 body{
-  padding-top:80px;
+  padding-top:120px;
 }
 #logo{
   margin-top: 10px;
@@ -27,6 +27,11 @@ body{
 }
 .nav-item{
   margin-left: 25px;
+  float: left;
+  margin-top: 20px;
+}
+.nav-ul-item{
+  padding-left: 25px;
   float: left;
   margin-top: 20px;
 }
@@ -75,6 +80,9 @@ input, textarea, select, .uneditable-input{
   width: 100%;
   margin-bottom: 15px
 }
+.input-checkbox input{
+  width: auto !important;
+}
 input{
   height: auto !important;
 }
@@ -88,4 +96,10 @@ span.picture{
 .show_recipe, .gravatar{
   margin: 10px 10px 10px 10px;
   padding-bottom: 5px;
+}
+.new_recipe-btn{
+  margin-left: 20px;
+}
+#myrecipes-btn{
+  margin-bottom: auto;
 }
