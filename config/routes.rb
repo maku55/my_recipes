@@ -8,8 +8,8 @@ get '/login', to: 'logins#new'
 post '/login', to:'logins#create'
 get '/logout', to:'logins#destroy'
 #just testing this sign up
-get '/new_user', to:'sign_ups#signup'
-post '/signup', to:'sign_ups#create'
+get '/signup', to:'sign_ups#signup'
+post '/create', to:'sign_ups#create'
 resources :styles, only: [:new, :create, :show]
 resources :ingredients, only: [:new , :create, :show]
 end

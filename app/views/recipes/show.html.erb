@@ -1,4 +1,6 @@
 <%=render 'shared/page_title', title: @recipe.name %>
+
+
 <div class="row">
 	<div class="gravatar_picture col-md-4 pull-right center">
 		<%= link_to gravatar_for(@recipe.chef, size:200), chef_path(@recipe.chef)%>
@@ -22,11 +24,12 @@
             <%end%>
             <%if @recipe.ingredients.any?%>
                  <p>Ingredients:<%= render @recipe.ingredients %></p>
-                <%end%>
+            <%end%>
                 <p>
                 <strong>Steps:</strong>
                 </p>
                 <%= simple_format(@recipe.description) %>
         </div>
+        <p class="row"><%= link_to 'Return to Recipes',recipes_path,class: "btn btn-warning btn-small"%></p>
 	</div>
 </div>
