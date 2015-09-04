@@ -19,6 +19,7 @@ gem 'therubyracer',  platforms: :ruby
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave',  '~> 0.10.0'
 gem 'fog','~> 1.33.0'
+gem 'annotate'
 gem 'mini_magick', '~>3.8.0'
 #gem 'rmagick', '~> 2.15.4'
 gem 'imagemagick-identify', '~> 0.0.1'

@@ -20,7 +20,7 @@ end
 
 def show
 	@ingredient=Ingredient.find(params[:id])
-	@recipes=@ingredient.recipes.pagination(page: params[page], per_page:2)
+	@recipes=@ingredient.recipes.paginate(page: params[:page], per_page:2)
 	
 end
 private
