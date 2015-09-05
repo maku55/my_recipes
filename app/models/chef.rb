@@ -20,5 +20,14 @@ has_many :likes, dependent: :destroy
 #email_regex = /\A[\W+\-.]+@ [a-z\d\-.]+\.[a-z]+\z/i
 validates :chefname, presence: true, length: {maximum: 25, minimum: 5}
 validates :email, presence: true, length: {maximum: 25}, uniqueness: {case_sensitive:false}
+mount_uploader :picture, PictureUploader
+validate :picture_size
 has_secure_password	
+
+private
+def picture_size
+	if picture.size > 5.megabyte
+		errors.add(:picture, "should be less than 5MB")
+	end
+end
 end

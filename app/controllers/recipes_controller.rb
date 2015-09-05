@@ -23,12 +23,12 @@ def update
 	end
 end
 def like
-	like=Like.create(like: params[:like],chef:current_user, recipe:@recipe)
+	like=Like.create(like: params[:like], chef:current_user, recipe:@recipe)
 	if like.valid?
 		flash[:sucess]="Your selection was successful"
 		redirect_to :back
 	else
-		flash[:danger]="You can only like/dislike only once"
+		flash[:danger]="You can like/dislike only once"
 		redirect_to :back
 	end
 end

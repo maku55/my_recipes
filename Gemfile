@@ -17,20 +17,34 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 #use activeModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
 gem 'carrierwave',  '~> 0.10.0'
+
 gem 'fog','~> 1.33.0'
+
 gem 'annotate'
+
 gem 'mini_magick', '~>3.8.0'
+
 #gem 'rmagick', '~> 2.15.4'
+
 gem 'imagemagick-identify', '~> 0.0.1'
+
 gem 'will_paginate','~> 3.0.7'
+
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+
+gem 'thumbs_up'
+
+#gem 'acts_as_votable', '~> 0.10.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
 gem 'heroku'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
