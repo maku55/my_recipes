@@ -8,7 +8,7 @@
 		<%=f.text_field :email %>
 		<%=f.label :password %>
 		<%=f.password_field :password %>
-		 <span class="picture"><%=f.file_field :picture, accept: 'image/jpg,image/png,image/jpeg,image/gif'%></span>
+		<span class="picture"><%=f.file_field :picture, accept: 'image/jpg,image/png,image/jpeg,image/gif'%></span>
 		<%=f.submit(@chef.new_record? ? "Sign Up" : "Edit Profile", class: "btn btn-success") %>
 	    <%end%>
 	</div>
